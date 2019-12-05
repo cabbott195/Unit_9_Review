@@ -58,7 +58,24 @@
                 <input required name="custPhone" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" id="phoneBox" placeholder="(nnn)nnn-nnnn"/>
             </div>
             <div>
-                <option name="orderType"
+               <input checked name = "orderType" id = "delivery" type = "radio" />
+               <label for = "delivery">Delivery</label>
+               <input name = "orderType" id = "pickup" type = "radio" />
+               <label for = "pickup">Pickup</label>
+            </div>
+            <fieldset id="deliveryInfo">
+               <legend>Delivery Options</legend>
+               <textarea name="delAddress" id="addressBox" placeholder="Enter delivery address"></textarea>
+               <label for="delBox">Delivery Time (leave blank for earliest delivery)</label>
+               <input type="time" name="delTime" id="delBox">
+            </fieldset>
+            <fieldset id="pickupInfo">
+               <legend>Pickup Options</legend>
+               <label for="pickupBox">Pickup Time(leave blank for earliest delivery)</label>
+               <input type="time" name="pickupTime" id="pickupBox">
+            </fieldset>
+            <div>
+               <input type="submit" value="Begin Building your Order">
             </div>
         </form>
          
